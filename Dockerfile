@@ -1,7 +1,6 @@
-FROM node:hydrogen-buster
+FROM node:16-alpine
 
-
-RUN apt-get update && apt-get install -y --only-upgrade git
+RUN apk add --no-cache git
 COPY graphserver.js .
 COPY package.json .
 COPY UScities.json .
