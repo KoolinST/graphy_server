@@ -1,5 +1,6 @@
 FROM node:16-alpine
 
+RUN apk upgrade --no-cache openssl
 RUN apk add --no-cache git
 COPY graphserver.js .
 COPY package.json .
